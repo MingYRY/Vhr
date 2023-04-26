@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 113459942
+    url: jdbc:mysql://localhost:3306/vhr?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+  rabbitmq:
+    username: zsr
+    password: 123456
+    host: 192.168.208.100
+    publisher-confirms: true
+    publisher-returns: true
+  redis:
+    host: 192.168.208.100
+    database: 0
+    port: 6379
+    password: 113459942
+  cache:
+    cache-names: menus_cache
+server:
+  port: 8081
+  compression:
+    enabled: true
+fastdfs:
+  nginx:
+    host: http://192.168.208.100/
+
+# 自定义jwt key
+jwt:
+  tokenHeader: Authorization
+  secret: ywy
+  tokenHead: Bearer
+  expiration: 3600
